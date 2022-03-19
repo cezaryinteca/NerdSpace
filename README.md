@@ -2,7 +2,7 @@
 
 ## Założenia projektowe
 
-Celem projektu będzie stworzenie aplikacji webowej, która będzie służyła do wyświetlania wpisów tworzonych przez użytkowników na temat nowinek technologicznych.Użytkownicy po założeniu konta i zalogowaniu się będą w stanie dodawać swoje posty oraz komentować i oceniać posty innych użytkowników. Administrator strony będzie miał możliwość usuwania postów oraz komentarzy użytkowników. Dodatkową funkcjonalnością będzie możliwość usunięcia użytkownika z portalu. Wszelkie dane będą przechowywane w bazie MySQL.
+Celem projektu będzie stworzenie aplikacji webowej, która będzie służyła do wyświetlania wpisów tworzonych przez użytkowników na temat nowinek technologicznych.Użytkownicy po założeniu konta i zalogowaniu się będą w stanie dodawać swoje posty oraz komentować posty innych użytkowników. Administrator strony będzie miał możliwość usuwania postów oraz komentarzy użytkowników. Dodatkową funkcjonalnością będzie możliwość usunięcia użytkownika z portalu. Wszelkie dane będą przechowywane w bazie MySQL.
 
 ## Wymagania funkcjonalne
 
