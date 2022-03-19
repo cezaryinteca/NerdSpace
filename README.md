@@ -24,7 +24,7 @@ wspólnym wallu.
 - azure cli
 - terraform
 - python flask
-- MySQL
+- Postgres
 - docker
 
 ## Środowiska chmurowe
