@@ -2,7 +2,7 @@
 
 ## Założenia projektowe
 
-Celem projektu będzie stworzenie aplikacji webowej, która będzie służyła do wyświetlania wpisów tworzonych przez użytkowników na temat nowinek technologicznych.Użytkownicy po założeniu konta i zalogowaniu się będą w stanie dodawać swoje posty oraz komentować posty innych użytkowników. Administrator strony będzie miał możliwość usuwania postów oraz komentarzy użytkowników. Dodatkową funkcjonalnością będzie możliwość usunięcia użytkownika z portalu. Wszelkie dane będą przechowywane w bazie MySQL.
+Celem projektu będzie stworzenie aplikacji webowej, która będzie służyła do wyświetlania wpisów tworzonych przez użytkowników na temat nowinek technologicznych.Użytkownicy po założeniu konta i zalogowaniu się będą w stanie dodawać swoje posty oraz komentować posty innych użytkowników. Dodatkową funkcjonalnością będzie możliwość usunięcia swojego konta z portalu. Wszelkie dane będą przechowywane w bazie Postgres.
 
 ## Wymagania funkcjonalne
 
@@ -16,8 +16,8 @@ wspólnym wallu.
 ## Wymagania niefunkcjonalne
 - Aplikacja zostanie postawiona na MS Azure
 - Będzie obsługiwana przez komputery z dostępem do internetu
-- Baza danych będzie obsługiwana przez MySQL
-- Hasła będą szyfrowane/hashowane nie widoczne dla użytkowników i administratora.
+- Baza danych będzie obsługiwana przez Postgres
+- Hasła będą szyfrowane/hashowane nie widoczne dla użytkowników.
  
 ## Wybrane technologie
 - html / css
@@ -34,11 +34,6 @@ wspólnym wallu.
 
 - Jako użytkownik chciałbym mieć możliwość utworzenia konta oraz zalogowania się do
 portalu.
-- Jako Administrator chciałbym mieć możliwość usuwania postów/kont/komentarzy
-utworzonych przez użytkowników.
 - Jako użytkownik chciałbym mieć możliwość dodawania treści oraz ich edycji.
-- Jako użytkownik miałbym też możliwość oceny i komentowania swoich postów oraz postów
+- Jako użytkownik miałbym też możliwość komentowania swoich postów oraz postów
 innych użytkowników.
-- Jako użytkownik chciałbym nie mieć możliwości usuwania i edytowania postów innych
-użytkowników.
-- Jak administrator chciałbym mieć wgląd we wpisy na bazie danych oraz historii edycji. 
