@@ -11,7 +11,7 @@ do portalu.
 - Aplikacja będzie wyświetlać informację udostępnione przez użytkowników na jednym,
 wspólnym wallu.
 - Udostępnione treści będą zapisywane w bazie danych
-- Możliwość oceny wstawionej treści lub dodanie komentarza
+- Możliwość dodania komentarza
 
 ## Wymagania niefunkcjonalne
 - Aplikacja zostanie postawiona na MS Azure
