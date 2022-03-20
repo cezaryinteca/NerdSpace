@@ -12,6 +12,7 @@ do portalu.
 wspólnym wallu.
 - Udostępnione treści będą zapisywane w bazie danych
 - Możliwość dodania komentarza
+- Możliwość logowania zdarzeń
 
 ## Wymagania niefunkcjonalne
 - Aplikacja zostanie postawiona na MS Azure
@@ -26,6 +27,8 @@ wspólnym wallu.
 - python flask
 - Postgres
 - docker
+- Prometheus
+- Grafana
 
 ## Środowiska chmurowe
 - Aplikacja będzie wystawiona na MS Azure.
