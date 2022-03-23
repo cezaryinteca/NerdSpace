@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} Rejestracja {% endblock %}
+
+{% block content %} 
+
+<form method="POST"> 
+    <br/>
+    <h2 align="center">Rejestracja</h2>
+    <div class="form-group">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="Wprowadź swój email" autocomplete="off" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="username" class="form-label">Nazwa</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Wprowadź swój pseudonim" autocomplete="off" required>
+      </div>
+
+    <div class="mb-3">
+      <label for="password1" class="form-label">Hasło</label>
+      <input type="password" class="form-control" placeholder="Wprowadź hasło" name="password1" id="password1" required>
+    </div>
+    <div class="mb-3">
+        <label for="password2" class="form-label">Powtórz hasło</label>
+        <input type="password" class="form-control" placeholder="Wprowadź hasło ponownie" name="password2" id="password2" required>
+      </div>
+
+    <br/>
+    <div align="center">
+        <button type="submit" class="btn btn-outline-dark btn-lg">Zarejestruj</button>
+    </div>
+</div>
+  </form>
+
+{% endblock %}
