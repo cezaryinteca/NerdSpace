@@ -25,10 +25,11 @@ wspólnym wallu.
 - azure cli
 - terraform
 - python flask
-- Postgres
+- SQLAlchemy
 - docker
 - Prometheus
 - Grafana
+- Locust
 
 ## Środowiska chmurowe
 - Aplikacja będzie wystawiona na MS Azure.
