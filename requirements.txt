@@ -1,3 +1,4 @@
-Flask==2.0.3
-Werkzeug==2.0.3
-Python==3.10.3
+Flask
+Werkzeug
+flask-sqlalchemy
+flask-login
