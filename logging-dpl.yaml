@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-python-deployment
+  name: logging
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-python-app
+      app: logging
   template:
     metadata:
       labels:
-        app: my-python-app
+        app: logging
     spec:
       containers:
-      - name: my-python-app
-        image: nerdspaceaksacr.azurecr.io/nerdspace:latest
+      - name: logging
+        image: nerdspaceaksacr.azurecr.io/logging:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-python-app-svc
+  name: logging-svc
 spec:
   selector:
-    app: my-python-app
+    app: logging-app
   ports:
     - protocol: TCP
       port: 5000

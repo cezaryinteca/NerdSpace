@@ -6,7 +6,12 @@ RUN pip install -r /tmp/requirements.txt
 
 RUN mkdir -p /srv
 
-ADD main.py /srv
+RUN cd ..
+
+ADD app.py /srv
+
+RUN cd logging
+
 ADD gunicorn_cfg.py /srv
 ADD wsgi.py /srv
 

@@ -6,7 +6,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      -  ./main.py:/srv/main.py
+      - . /app.py:/srv/app.py
   prometheus:
     image: prom/prometheus:v2.1.0
     ports:
