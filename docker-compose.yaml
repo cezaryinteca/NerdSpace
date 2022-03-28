@@ -1,12 +1,12 @@
 version: '3'
 services:
-  order-manager:
+  nerdspace:
     build:
       context: .
     ports:
       - 8080:8080
     volumes:
-      - . /app.py:/srv/app.py
+      - ./main.py:/srv/main.py
   prometheus:
     image: prom/prometheus:v2.1.0
     ports:
@@ -20,7 +20,7 @@ services:
       - ./prometheus/data/:/data/prometheus/
     links:
       - alertmanager:alertmanager
-      - order-manager:order-manager
+      - nerdspace:nerdspace
   alertmanager:
     image: prom/alertmanager:v0.15.1
     ports:

@@ -1,8 +1,8 @@
-PROJECT_NAME=pycode-prom-flask
+PROJECT_NAME=nerdspace
 
 docker_build:
 	docker-compose -f docker-compose.yaml --project-name $(PROJECT_NAME) build && \
-	docker tag ${PROJECT_NAME}_order-manager wojciech12/$(PROJECT_NAME)
+	docker tag nerdspace_nerdspace nerdspaceaksacr.azurecr.io/$(PROJECT_NAME)
 
 run:
 	rm -rf multiproc-tmp && \
