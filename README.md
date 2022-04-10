@@ -21,15 +21,22 @@ wspólnym wallu.
 - Hasła będą szyfrowane/hashowane nie widoczne dla użytkowników.
  
 ## Wybrane technologie
-- html / css
-- azure cli
-- terraform
-- python flask
-- SQLAlchemy
-- docker
-- Prometheus
-- Grafana
-- Locust
+- html / css - latest
+- azure cli - latest
+- terraform - latest
+- python flask - latest
+- SQLAlchemy - latest
+- docker - latest
+- Prometheus - latest
+- Grafana - latest
+- Locust - latest
+- helm - latest
+- kubernetes - latest
+- octant - latest
+
+## Wykorzystane IDE
+- Pycharm/Visual Studio Code
+
 
 ## Środowiska chmurowe
 - Aplikacja będzie wystawiona na MS Azure.
@@ -41,3 +48,17 @@ portalu.
 - Jako użytkownik chciałbym mieć możliwość dodawania treści oraz ich edycji.
 - Jako użytkownik miałbym też możliwość komentowania swoich postów oraz postów
 innych użytkowników.
+
+# Część procesowa
+
+## Opis wytwarzania oprogramowania: MATI 
+
+## Deployment:
+Aplikacja wystawiana jest na zasobach chmurowych w naszym przypadku Azure. 
+Za pomocą Terraform rozstawiamy cluster oraz repozytorium. Używając do tego polecenia „terraform apply”.  Następnie pushujemy nasz obraz z aplikacją. 
+Całość odbywa się przy użyciu Azure Cli, poleceń dockera takich jak „docker build” „docker tag” czy też „docker push”. 
+
+Do całości dodane jest również oprogramowanie które loguje procesy oraz ruchy na stronie naszej aplikacji. Sam logging został zaiplementowany na clustrze za pomocą helm chartów. 
+Zostały przygotowane templatki wykorzystujące globalne values. Deployment odbywa się za pomocą polecenia „helm upgrade <nazwa namespace> <nazwa repo>”.
+Po rozstawieniu wszystkich komponentów, możemy wyświetlić zawartość strony przy pomocy narzędzia o nazwie Octant i uruchomieniu „forward port” z poziomu serwisów. 
+
