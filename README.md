@@ -51,7 +51,27 @@ innych użytkowników.
 
 # Część procesowa
 
-## Opis wytwarzania oprogramowania: MATI 
+## Opis wytwarzania oprogramowania: 
+I Sprint
+1. Inicjowanie i uruchomienie serwera Flask 
+2. Tworzenie routingów do poszczególnych widoków
+3. Utworzenie widoku strony głównej oraz szablonów innych widoków przy użyciu Jinja2
+4. Dodanie do głównego szablonu panelu nawigacji z biblioteki Bootstrap
+5. Stworzenie bazy danych przy wykorzystaniu biblioteki SQLAlchemy
+## II Sprint
+6. Tworzenie formularzy do przekazywania danych rejestracji/logowania do back-endu
+7. Utworzenie modelu Użytkownik 
+8. Implementacja logiki tworzenia nowych użytkowników i logowania
+9. Dodanie alertów
+## III Sprint
+10. Utworzenie modelu Post
+11. Implementacja mechanizmu tworzenia nowych postów oraz ich wyświetlania
+12. Dodanie funkcji usuwania postów
+## IV Sprint
+13. Utworzenie modelu Komentarz
+14. Stworzenie widoków wyświetlania komentarzy
+15. Implementacja dodawania komentarzy do postów
+16. Dodanie funkcji usuwania komentarzy
 
 ## Deployment:
 Aplikacja wystawiana jest na zasobach chmurowych w naszym przypadku Azure. 
