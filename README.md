@@ -52,7 +52,7 @@ innych użytkowników.
 # Część procesowa
 
 ## Opis wytwarzania oprogramowania: 
-I Sprint
+## I Sprint
 1. Inicjowanie i uruchomienie serwera Flask 
 2. Tworzenie routingów do poszczególnych widoków
 3. Utworzenie widoku strony głównej oraz szablonów innych widoków przy użyciu Jinja2
