@@ -43,7 +43,7 @@ def sign_up():
         elif username_exists:
             flash('Konto z podaną nazwą już istnieje.', category='error')
         elif password1 != password2:
-            flash('Podane hasła nie są takei same.', category='error')
+            flash('Podane hasła nie są takia same.', category='error')
         elif len(username) < 2:
             flash('Nazwa użytkownika jest zbyt krótka.', category='error')
         elif len(password1) < 6:

@@ -1,11 +1,15 @@
 {% extends "posts_div.html" %} 
-{% block title %}{{username}}'s Posts{% endblock %} 
-{% block header %} {{username}}'s posts {% endblock %} 
+{% block title %} Wpisy użytkownika {{username}} {% endblock %} 
+
+{% block header %} Wpisy użytkownika {{username}} {% endblock %} 
+
+
 
 {% block footer %}
+    
     <div align="center">
       <a href="/home"
-        ><button type="button" class="btn btn-primary btn-lg">Back</button></a
+        ><button type="button" class="btn btn-lg btn-outline-secondary">Wróć</button></a
       >
     </div>
 {% endblock %}
