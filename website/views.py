@@ -1,9 +1,18 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, Response, Flask
 from flask_login import login_required, current_user
 from .models import Post, User, Comment
 from . import db
-
+import prometheus_client
+from prometheus_client.core import CollectorRegistry
+from prometheus_client import Summary, Counter, Histogram, Gauge
+import time
 views = Blueprint("views", __name__)
+
+_INF = float("inf")
+
+graphs = {}
+graphs['c'] = Counter("python_request_operation_total", "The total number of processed request ")
+graphs['h'] = Histogram("python_request_duration_seconds", "Histogram for the duration in seconds", buckets=(1,2,5,6,10, _INF))
 
 
 @views.route("/")
@@ -11,14 +20,27 @@ views = Blueprint("views", __name__)
 @login_required
 def home():
     posts = Post.query.all()
+    start = time.time()
+    graphs['c'].inc()
+
+    time.sleep(0.600)
+    end = time.time()
+    graphs['h'].observe(end - start)
     return render_template("home.html", user=current_user, posts=posts)
 
 
 @views.route("/create-post", methods=['GET', 'POST'])
 @login_required
 def create_post():
+    start = time.time()
+    graphs['c'].inc()
+
+    time.sleep(0.600)
+    end = time.time()
+    graphs['h'].observe(end - start)
     if request.method == "POST":
         text = request.form.get('text')
+
 
         if not text:
             flash('Wpis nie może być pusty', category='error')
@@ -27,6 +49,8 @@ def create_post():
             db.session.add(post)
             db.session.commit()
             flash('Wpis utworzony!', category='success')
+            
+
             return redirect(url_for('views.home'))
 
     return render_template('create_post.html', user=current_user)
@@ -95,3 +119,11 @@ def delete_comment(comment_id):
         db.session.commit()
 
     return redirect(url_for('views.home'))
+
+
+@views.route("/metrics")
+def request_count():
+    res = []
+    for k,v in graphs.items():
+        res.append(prometheus_client.generate_latest(v))
+    return Response(res, mimetype="text/plain")

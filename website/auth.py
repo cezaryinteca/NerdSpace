@@ -22,7 +22,7 @@ def login():
             else:
                 flash('Podane hasło jest nieprawidłowe.', category='error')
         else:
-            flash('Uzytkownik o podanym emailu nei istnieje.', category='error')
+            flash('Uzytkownik o podanym emailu nie istnieje.', category='error')
 
     return render_template("login.html", user=current_user)
 
