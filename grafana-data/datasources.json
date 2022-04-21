@@ -1,0 +1,6 @@
+{
+    "name": "prometheus",
+    "type": "prometheus",
+    "url": "http://prometheus-svc:9090",
+    "access": "direct"
+}
