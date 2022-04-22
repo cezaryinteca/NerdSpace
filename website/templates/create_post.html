@@ -1,0 +1,15 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+    {% block content%}
+    <h1 align="center">Stwórz nowy wpis</h1>
+    <br/>
+    <form method="POST">
+      <textarea name="text" id="text" class="form-control"></textarea>
+      <br />
+      <div align="center">
+        <a href="/home"><button type="button" class="btn btn-lg btn-outline-secondary" style="margin-right: 20px;">Wróć</button></a>
+        <button type="submit" class="btn btn-lg btn-outline-dark" style="margin-left: 20px;">Zakończ i zapisz</button>
+      </div>
+    </form>
+    <br />
+    {% endblock %}
