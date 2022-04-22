@@ -1,7 +1,0 @@
-Flask
-Werkzeug
-flask-sqlalchemy
-flask-login
-flask-cors
-prometheus_client
-gunicorn
