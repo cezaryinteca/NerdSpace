@@ -23,16 +23,11 @@ wspólnym wallu.
 ## Wybrane technologie
 - html / css - latest
 - azure cli - latest
-- terraform - latest
 - python flask - latest
 - SQLAlchemy - latest
 - docker - latest
 - Prometheus - latest
 - Grafana - latest
-- Locust - latest
-- helm - latest
-- kubernetes - latest
-- octant - latest
 
 ## Wykorzystane IDE
 - Pycharm/Visual Studio Code
