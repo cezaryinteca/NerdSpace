@@ -69,11 +69,23 @@ innych użytkowników.
 16. Dodanie funkcji usuwania komentarzy
 
 ## Deployment:
-Aplikacja wystawiana jest na zasobach chmurowych w naszym przypadku Azure. 
-Za pomocą Terraform rozstawiamy cluster oraz repozytorium. Używając do tego polecenia „terraform apply”.  Następnie pushujemy nasz obraz z aplikacją. 
-Całość odbywa się przy użyciu Azure Cli, poleceń dockera takich jak „docker build” „docker tag” czy też „docker push”. 
-
-Do całości dodane jest również oprogramowanie które loguje procesy oraz ruchy na stronie naszej aplikacji. Sam logging został zaiplementowany na clustrze za pomocą helm chartów. 
-Zostały przygotowane templatki wykorzystujące globalne values. Deployment odbywa się za pomocą polecenia „helm upgrade <nazwa namespace> <nazwa repo>”.
-Po rozstawieniu wszystkich komponentów, możemy wyświetlić zawartość strony przy pomocy narzędzia o nazwie Octant i uruchomieniu „forward port” z poziomu serwisów. 
+# azure cli - maszyna wirtualna
+az vm create \
+  --location eastus \
+  --resource-group lab1 \
+  --name helloKUBE \
+  --size Standard_B1ls \
+  --image ubuntuLTS \
+  --public-ip-sku Standard \
+  --admin-username login \
+  --admin-password twoje-hasło
+ # rozłożenie aplikacji na dockerze
+ docker-compose up -d python-application
+ docker-compose up -d prometheus
+ docker-compose up -d grafana
+ docker-compose up -d grafana-dashboards
+ # odapalenie aplikacji na adresie publicznym
+ ngrok http 5000 - aplikacja python
+ ngrok http 9090 - prometheus
+ ngrok http 3000 - grafana
 
